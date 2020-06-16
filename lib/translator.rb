@@ -20,14 +20,11 @@ end
 def get_japanese_emoticon(path, emoticon1)
   lookup = load_library(path)
   
-  emoticon1 = lookup.keys.each do |key|
-    lookup[key][:english] == emoticon1
     if !lookup[get_english_meaning(path, emoticon1)]
       "Sorry, that emoticon was not found"
     else
       lookup[get_english_meaning(path, emoticon1)][:japanese]
     end
-  end
 end
 
 def get_english_meaning(path, emoticon)
