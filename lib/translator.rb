@@ -6,6 +6,7 @@ def load_library(path)
   
   emoticons.each_with_object({}) do |(key, value), final_array|
     binding.pry
+    emoticons
   end
 end
 
