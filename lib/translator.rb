@@ -9,6 +9,7 @@ def load_library(path)
     final_array[:english] = value[0]
     final_array[:japanese] = value[1]
   end
+  final_array
 end
 
 def get_japanese_emoticon(path, emoticon1)
