@@ -20,8 +20,9 @@ end
 def get_japanese_emoticon(path, emoticon1)
   lookup = load_library(path)
   
-  emoticon1 = lookup.key.each do |key|
+  emoticon1 = lookup.keys.each do |key|
     lookup[key][:english] == emoticon1
+    binding.pry
     if 
     end
   end
