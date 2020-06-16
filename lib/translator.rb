@@ -8,6 +8,7 @@ def load_library(path)
     binding.pry
     final_array[key] = {}
     final_array[:english] = value[0]
+    final_array[:english] = value[1]
   end
 end
 
