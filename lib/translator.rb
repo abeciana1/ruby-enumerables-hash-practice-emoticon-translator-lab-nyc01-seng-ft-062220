@@ -22,7 +22,6 @@ def get_japanese_emoticon(path, emoticon1)
   
   emoticon1 = lookup.keys.each do |key|
     lookup[key][:english] == emoticon1
-    binding.pry
     if emoticon1 == nil
       "Sorry, that emoticon was not found"
     else 
