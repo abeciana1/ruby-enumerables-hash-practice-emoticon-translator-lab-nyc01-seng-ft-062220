@@ -9,25 +9,3 @@ def load_library(path)
   end
 end
 
-def get_japanese_emoticon(path, emoticon1)
-  lookup = load_library(path)
-  
-    if !lookup[get_english_meaning(path, emoticon1)]
-      "Sorry, that emoticon was not found"
-    else
-      lookup[get_english_meaning(path, emoticon1)][:japanese]
-    end
-end
-
-def get_english_meaning(path, emoticon)
-  lookup = load_library(path)
-  
-  sample = lookup.find do |(key, value)|
-    value[:japanese] == emoticon || value[:english] == emoticon
-  end
-    if sample == nil
-    "Sorry, that emoticon was not found"
-    else
-      return sample[0]
-    end
-end
