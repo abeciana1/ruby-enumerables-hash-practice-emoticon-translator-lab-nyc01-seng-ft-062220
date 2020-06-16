@@ -25,7 +25,7 @@ def get_japanese_emoticon(path, emoticon1)
     if emoticon1 == nil
       "Sorry, that emoticon was not found"
     else 
-      lookup[key][:japanese]
+      emoticon1 = lookup[key][:japanese]
     end
   end
 end
