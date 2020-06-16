@@ -20,6 +20,8 @@ end
 def get_japanese_emoticon(path, emoticon1)
   lookup = load_library(path)
   
+  
+  
   binding.pry
   
 end
