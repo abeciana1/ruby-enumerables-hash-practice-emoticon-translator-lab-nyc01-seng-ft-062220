@@ -21,7 +21,7 @@ def get_japanese_emoticon(path, emoticon1)
   lookup = load_library(path)
   
   lookup.key.each do |key|
-    lookup[key]
+    lookup[key][:english] == emoticon1
   
   binding.pry
   
