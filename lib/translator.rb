@@ -1,15 +1,17 @@
 require 'yaml'
 require 'pry'
 
-def load_library(path)
-  emoticons = YAML.load_file(path)
-  
-  emoticons.each_with_object({}) do |(key, value), final_array|
-    final_array[key] = {}
-    final_array[:english] = value[0]
-    final_array[:japanese] = value[1]
+def load_library(file_path)
+  emoticons = YAML.load_file(file_path)
+  new_hash = {}
+
+  emoticons.each do |key,value|
+    new_hash[key] = {}
+    new_hash[key][:english] = value[0]
+    new_hash[key][:japanese] = value[1]
   end
-  final_array
+
+  new_hash
 end
 
 def get_japanese_emoticon(path, emoticon1)
